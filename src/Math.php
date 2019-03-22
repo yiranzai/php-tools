@@ -93,9 +93,9 @@ class Math
      *
      * @param $a
      * @param $b
-     * @return float|int
+     * @return int
      */
-    public static function gcd(int $a, int $b)
+    public static function gcd(int $a, int $b): int
     {
         if ($a === 0 || $b === 0) {
             return abs(max(abs($a), abs($b)));
@@ -112,9 +112,9 @@ class Math
      *
      * @param array $array
      * @param int   $a
-     * @return int|mixed
+     * @return int
      */
-    public static function gcdArray(array $array, $a = 0)
+    public static function gcdArray(array $array, $a = 0): int
     {
         $b = array_pop($array);
         return ($b === null) ?

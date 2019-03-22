@@ -52,9 +52,9 @@ class Tools
     /**
      * 获取一个对象或者一个数组的属性
      *
-     * @param      $iterator
-     * @param      $key
-     * @param null $default
+     * @param            $iterator
+     * @param mixed      $key
+     * @param mixed|null $default
      * @return mixed
      * @throws \Exception
      */
