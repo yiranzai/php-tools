@@ -1,0 +1,56 @@
+{
+    "name": "yiranzai/tools",
+    "type": "library",
+    "description": "php tools",
+    "keywords": [
+        "yiranzai",
+        "tools"
+    ],
+    "homepage": "https://github.com/yiranzai/php-tools",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "yiranzai",
+            "email": "wuqingdzx@gmail.com",
+            "homepage": "https://blog.yiranzai.cn",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "~7.1",
+        "symfony/filesystem": "^4.2",
+        "nesbot/carbon": "^1.26.0",
+        "guzzlehttp/guzzle": "^6.3",
+        "ext-bcmath": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": ">=7.0",
+        "squizlabs/php_codesniffer": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yiranzai\\Tools\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Yiranzai\\Tools\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": [
+            "@fix-style",
+            "phpunit"
+        ],
+        "check-style": "phpcs src tests",
+        "fix-style": "phpcbf src tests"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
