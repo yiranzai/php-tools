@@ -9,16 +9,16 @@
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-php tools
+php 常用工具
 
-## Structure
+## 目录
 
 ```
 src/
 tests/
 ```
 
-## Install
+## 安装
 
 Via Composer
 
@@ -26,34 +26,34 @@ Via Composer
 $ composer require yiranzai/tools
 ```
 
-## Usage
+## 使用
 
 -   `Arr::class`
-    -   `\Yiranzai\Tools\Arr::arrSortByField()` // dyadic array sorting
-    -   `\Yiranzai\Tools\Arr::arrGroup()` // Arrays are grouped by field
+    -   `\Yiranzai\Tools\Arr::arrSortByField()` // 二维数组排序
+    -   `\Yiranzai\Tools\Arr::arrGroup()` // 数组按字段分组
 -   `Date::class`
-    -   `\Yiranzai\Tools\Date::toCarbon()` // Generate a Carbon object
-    -   `\Yiranzai\Tools\Date::timeDiffFormat()` // Output the gap between two DateTime objects
+    -   `\Yiranzai\Tools\Date::toCarbon()` // 生成 Carbon 对象
+    -   `\Yiranzai\Tools\Date::timeDiffFormat()` // 输出两个 DateTime 对象的差距
 -   `Math::class`
-    -   `\Yiranzai\Tools\Math::formatDiv()` // rounding format division
-    -   `\Yiranzai\Tools\Math::formatMod()` // rounded out formatted remainder (modulo operation)
-    -   `\Yiranzai\Tools\Math::formatMul()` // rounding format multiplication
-    -   `\Yiranzai\Tools\Math::formatSub()` // rounding format subtraction
-    -   `\Yiranzai\Tools\Math::formatAdd()` // rounding up formatting addition
-    -   `\Yiranzai\Tools\Math::gcd()` // Find the greatest common divisor of two numbers
-    -   `\Yiranzai\Tools\Math::gcdArray()` // Find the greatest common divisor of an array
+    -   `\Yiranzai\Tools\Math::formatDiv()` // 四舍五入 格式化除法
+    -   `\Yiranzai\Tools\Math::formatMod()` // 四舍五入 格式化取余（模运算）
+    -   `\Yiranzai\Tools\Math::formatMul()` // 四舍五入 格式化乘法
+    -   `\Yiranzai\Tools\Math::formatSub()` // 四舍五入 格式化减法
+    -   `\Yiranzai\Tools\Math::formatAdd()` // 四舍五入 格式化加法
+    -   `\Yiranzai\Tools\Math::gcd()` // 求两个数的最大公约数
+    -   `\Yiranzai\Tools\Math::gcdArray()` // 求一个数组的最大公约数
 -   `Tools::class`
-    -   `\Yiranzai\Tools\Tools::getNiceFileSize()` // Humanized conversion memory information
-    -   `\Yiranzai\Tools\Tools::callFunc()` // Method of calling the object
-    -   `\Yiranzai\Tools\Tools::iteratorGet()` // Get an object or an array of elements
-    -   `\Yiranzai\Tools\Tools::arrGet()` // Get an element in the array
-    -   `\Yiranzai\Tools\Tools::objectGet()` // Get an element from the object
+    -   `\Yiranzai\Tools\Tools::getNiceFileSize()` // 人性化转化内存信息
+    -   `\Yiranzai\Tools\Tools::callFunc()` // 调用对象的方法
+    -   `\Yiranzai\Tools\Tools::iteratorGet()` // 获取一个对象或者一个数组的属性
+    -   `\Yiranzai\Tools\Tools::arrGet()` // 获取数组中的某个元素
+    -   `\Yiranzai\Tools\Tools::objectGet()` // 获取对象中的某个元素
 
 ## Change log
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
 
-## Testing
+## 测试
 
 ```bash
 $ composer test
@@ -63,7 +63,7 @@ $ composer test
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) and [CODE_OF_CONDUCT](CODE_OF_CONDUCT.md) for details.
 
-## Security
+## 安全
 
 If you discover any security related issues, please email wuqingdzx@gmail.com instead of using the issue tracker.
 
