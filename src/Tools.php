@@ -8,6 +8,9 @@
 
 namespace Yiranzai\Tools;
 
+use ArrayAccess;
+use Exception;
+
 class Tools
 {
     /**
@@ -56,12 +59,12 @@ class Tools
      * @param mixed      $key
      * @param mixed|null $default
      * @return mixed
-     * @throws \Exception
+     * @throws Exception
      */
     public static function iteratorGet($iterator, $key, $default = null)
     {
         if (empty($iterator)) {
-            if ($default instanceof \Exception) {
+            if ($default instanceof Exception) {
                 throw $default;
             }
 
@@ -70,7 +73,7 @@ class Tools
 
         if (is_object($iterator)) {
             if (!method_exists($iterator, $key)) {
-                if ($iterator instanceof \ArrayAccess) {
+                if ($iterator instanceof ArrayAccess) {
                     return self::arrGet($iterator, $key, $default);
                 }
                 return self::objectGet($iterator, $key, $default);
@@ -89,7 +92,7 @@ class Tools
      * @param mixed       $key     下标
      * @param null|mixed  $default 默认值
      * @return mixed|null   如果存在指定元素则返回元素，否则返回默认值
-     * @throws \Exception
+     * @throws Exception
      */
     public static function arrGet($arr, $key, $default = null)
     {
@@ -102,7 +105,7 @@ class Tools
         }
 
         if ($isDefault) {
-            if ($default instanceof \Exception) {
+            if ($default instanceof Exception) {
                 throw $default;
             }
             return $default;
@@ -117,7 +120,7 @@ class Tools
      * @param string     $key     下标
      * @param null|mixed $default 默认值
      * @return mixed|null 如果存在指定元素则返回该元素，否则返回默认值
-     * @throws \Exception
+     * @throws Exception
      */
     public static function objectGet($json, $key, $default = null)
     {
@@ -130,7 +133,7 @@ class Tools
         }
 
         if ($isDefault) {
-            if ($default instanceof \Exception) {
+            if ($default instanceof Exception) {
                 throw $default;
             }
 

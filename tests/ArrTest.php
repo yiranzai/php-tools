@@ -8,12 +8,20 @@
 
 namespace Yiranzai\Tools\Tests;
 
+use Exception;
 use PHPUnit\Framework\TestCase;
 use Yiranzai\Tools\Arr;
 
+/**
+ * Class ArrTest
+ * @package Yiranzai\Tools\Tests
+ */
 class ArrTest extends TestCase
 {
-    public function testArrSortByField()
+    /**
+     *
+     */
+    public function testArrSortByField(): void
     {
         $a = [
             ['a' => 1, 'b' => 0, 'c' => 2],
@@ -35,7 +43,10 @@ class ArrTest extends TestCase
         $this->assertSame($b, Arr::arrSortByField($a, 'a'));
     }
 
-    public function testArrGroup()
+    /**
+     * @throws Exception
+     */
+    public function testArrGroup(): void
     {
         $a = [
             ['a' => 1, 'b' => 0, 'c' => 2],
@@ -66,5 +77,16 @@ class ArrTest extends TestCase
         ];
         $this->assertSame($c, Arr::arrGroup($a, 'a'));
         $this->assertSame($d, Arr::arrGroup($a, 'a', true));
+    }
+
+    /**
+     *
+     */
+    public function testSort(): void
+    {
+        $arr = [5, 8, 9, 5, 2, 5, 6, 2, 14, 5, 6, 2, 2, 12, 23, 3];
+        $this->assertSame(Arr::heapSort($arr), Arr::quickSort($arr));
+        $this->assertSame(Arr::mergeSort($arr), Arr::quickSort($arr));
+        $this->assertSame(Arr::heapSort($arr), Arr::mergeSort($arr));
     }
 }

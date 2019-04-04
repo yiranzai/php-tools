@@ -9,6 +9,7 @@
 namespace Yiranzai\Tools;
 
 use Carbon\Carbon;
+use DateTime;
 
 class Date
 {
@@ -16,8 +17,8 @@ class Date
      * 生成Carbon对象，不合法数据会返回默认值
      *
      * @param      $dateTime
-     * @param bool $default
-     * @return bool|\Carbon\Carbon
+     * @param mixed $default
+     * @return bool|Carbon
      */
     public static function toCarbon($dateTime = null, $default = false)
     {
@@ -33,12 +34,12 @@ class Date
 
     /**
      * 人性化显示两个时间的差
-     * @param \DateTime $leftTime
-     * @param \DateTime $rightTime
+     * @param DateTime $leftTime
+     * @param DateTime $rightTime
      * @param bool      $absolute
      * @return string
      */
-    public static function timeDiffFormat(\DateTime $leftTime, \DateTime $rightTime, $absolute = false): string
+    public static function timeDiffFormat(DateTime $leftTime, DateTime $rightTime, $absolute = false): string
     {
         $diff = $leftTime->diff($rightTime, $absolute);
         return ($absolute && !$diff->invert ? '-' : '')
