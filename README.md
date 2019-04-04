@@ -1,9 +1,9 @@
 # php-tools
 
-[ENGLISH](README.md) | [中文](README_ZH_CN.md)
+[ENGLISH](docs/README.md) | [中文](docs/README_ZH_CN.md)
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
-[![Software License][ico-license]](LICENSE.md)
+[![Software License][ico-license]](docs/LICENSE.md)
 [![Build Status][ico-travis]][link-travis]
 [![Coverage Status][ico-scrutinizer]][link-scrutinizer]
 [![Quality Score][ico-code-quality]][link-code-quality]
@@ -28,9 +28,16 @@ $ composer require yiranzai/tools
 
 ## Usage
 
+[User Manual](docs/USER_MANUAL.md)
+
+> abstract
+
 -   `Arr::class`
     -   `\Yiranzai\Tools\Arr::arrSortByField()` // dyadic array sorting
     -   `\Yiranzai\Tools\Arr::arrGroup()` // Arrays are grouped by field
+    -   `\Yiranzai\Tools\Arr::heapSort()` // Heap Sort
+    -   `\Yiranzai\Tools\Arr::mergeSort()` // Merge Sort
+    -   `\Yiranzai\Tools\Arr::quickSort()` // Quick Sort
 -   `Date::class`
     -   `\Yiranzai\Tools\Date::toCarbon()` // Generate a Carbon object
     -   `\Yiranzai\Tools\Date::timeDiffFormat()` // Output the gap between two DateTime objects
@@ -42,6 +49,9 @@ $ composer require yiranzai/tools
     -   `\Yiranzai\Tools\Math::formatAdd()` // rounding up formatting addition
     -   `\Yiranzai\Tools\Math::gcd()` // Find the greatest common divisor of two numbers
     -   `\Yiranzai\Tools\Math::gcdArray()` // Find the greatest common divisor of an array
+-   `Filesystem::class`
+    -   `\Yiranzai\Tools\Filesystem::put()` // Store contents in the file.
+    -   `\Yiranzai\Tools\Filesystem::get()` // Get the contents of a file.
 -   `Tools::class`
     -   `\Yiranzai\Tools\Tools::getNiceFileSize()` // Humanized conversion memory information
     -   `\Yiranzai\Tools\Tools::callFunc()` // Method of calling the object
@@ -51,7 +61,7 @@ $ composer require yiranzai/tools
 
 ## Change log
 
-Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
+Please see [CHANGELOG](docs/CHANGELOG.md) for more information on what has changed recently.
 
 ## Testing
 
@@ -61,7 +71,7 @@ $ composer test
 
 ## Contributing
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) and [CODE_OF_CONDUCT](CODE_OF_CONDUCT.md) for details.
+Please see [CONTRIBUTING](docs/CONTRIBUTING.md) and [CODE_OF_CONDUCT](docs/CODE_OF_CONDUCT.md) for details.
 
 ## Security
 
@@ -74,7 +84,7 @@ If you discover any security related issues, please email wuqingdzx@gmail.com in
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+The MIT License (MIT). Please see [License File](docs/LICENSE.md) for more information.
 
 [ico-version]: https://img.shields.io/packagist/v/yiranzai/tools.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square

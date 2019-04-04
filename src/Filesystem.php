@@ -11,33 +11,6 @@ class Filesystem extends FilesystemAlias
 {
 
     /**
-     * Store an item in the cache for a given number of minutes.
-     *
-     * @param string $path
-     * @param string $contents
-     * @param bool   $lock
-     * @return bool|int
-     */
-    public function put($path, $contents, $lock = false)
-    {
-        $this->ensureCacheDirectoryExists($path);
-        return file_put_contents($path, $contents, $lock ? LOCK_EX : 0);
-    }
-
-    /**
-     * Create the file cache directory if necessary.
-     *
-     * @param string $path
-     * @return void
-     */
-    protected function ensureCacheDirectoryExists($path): void
-    {
-        if (!$this->exists(dirname($path))) {
-            $this->makeDirectory(dirname($path), 0777, true, true);
-        }
-    }
-
-    /**
      * Get the MD5 hash of the file at the given path.
      *
      * @param string $path
@@ -73,6 +46,51 @@ class Filesystem extends FilesystemAlias
     public function exists($path): bool
     {
         return file_exists($path);
+    }
+
+    /**
+     * Store contents in the file
+     *
+     * @param string $path
+     * @param string $contents
+     * @param bool   $lock
+     * @return bool|int
+     */
+    public function put($path, $contents, $lock = false)
+    {
+        $this->ensureCacheDirectoryExists($path);
+        return file_put_contents($path, $contents, $lock ? LOCK_EX : 0);
+    }
+
+    /**
+     * Create the file cache directory if necessary.
+     *
+     * @param string $path
+     * @return void
+     */
+    protected function ensureCacheDirectoryExists($path): void
+    {
+        if (!$this->exists(dirname($path))) {
+            $this->makeDirectory(dirname($path), 0777, true, true);
+        }
+    }
+
+    /**
+     * Create a directory.
+     *
+     * @param string $path
+     * @param int    $mode
+     * @param bool   $recursive
+     * @param bool   $force
+     * @return bool
+     */
+    public function makeDirectory($path, $mode = 0755, $recursive = false, $force = false): bool
+    {
+        if ($force) {
+            return @mkdir($path, $mode, $recursive);
+        }
+
+        return mkdir($path, $mode, $recursive);
     }
 
     /**
@@ -406,24 +424,6 @@ class Filesystem extends FilesystemAlias
         }
 
         return true;
-    }
-
-    /**
-     * Create a directory.
-     *
-     * @param string $path
-     * @param int    $mode
-     * @param bool   $recursive
-     * @param bool   $force
-     * @return bool
-     */
-    public function makeDirectory($path, $mode = 0755, $recursive = false, $force = false): bool
-    {
-        if ($force) {
-            return @mkdir($path, $mode, $recursive);
-        }
-
-        return mkdir($path, $mode, $recursive);
     }
 
     /**
