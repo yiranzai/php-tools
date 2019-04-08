@@ -11,7 +11,7 @@ Add `Arr::sortBy()`
 ### Added
 
 -   `Arr::class`
-    -   `\Yiranzai\Tools\Arr::sortBy()` // Sorts the array with the given callback and retains the original key.
+    -   `\Yiranzai\Tools\Arr::sortBy()` // Sorts the array with the given callback and retains the original key, support multi-column sorting.
 
 ## v0.2 - 2019-04-04
 

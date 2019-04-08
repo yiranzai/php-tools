@@ -33,7 +33,7 @@ $ composer require yiranzai/tools
 > abstract
 
 -   `Arr::class`
-    -   `\Yiranzai\Tools\Arr::sortBy()` // Sorts the array with the given callback and retains the original key.
+    -   `\Yiranzai\Tools\Arr::sortBy()` // Sorts the array with the given callback and retains the original key, support multi-column sorting.
     -   `\Yiranzai\Tools\Arr::arrSortByField()` // dyadic array sorting
     -   `\Yiranzai\Tools\Arr::arrGroup()` // Arrays are grouped by field
     -   `\Yiranzai\Tools\Arr::heapSort()` // Heap Sort
