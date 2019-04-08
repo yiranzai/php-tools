@@ -3,6 +3,7 @@
 [User Manual](USER_MANUAL.md) | [用户手册](USER_MANUAL_ZH_CN.md)
 
 -   `Arr::class`
+    -   `\Yiranzai\Tools\Arr::sortBy()` // Sorts the array with the given callback and retains the original key.
     -   `\Yiranzai\Tools\Arr::arrSortByField()` // dyadic array sorting
     -   `\Yiranzai\Tools\Arr::arrGroup()` // Arrays are grouped by field
     -   `\Yiranzai\Tools\Arr::heapSort()` // Heap Sort

@@ -33,6 +33,7 @@ $ composer require yiranzai/tools
 > 摘要
 
 -   `Arr::class`
+    -   `\Yiranzai\Tools\Arr::sortBy()` // 使用给定的回调对数组进行排序并保留原始键
     -   `\Yiranzai\Tools\Arr::arrSortByField()` // 二维数组排序
     -   `\Yiranzai\Tools\Arr::arrGroup()` // 数组按字段分组
     -   `\Yiranzai\Tools\Arr::heapSort()` // 堆排序

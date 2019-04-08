@@ -4,6 +4,15 @@ All notable changes to `tools` will be documented in this file.
 
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+## v0.2.1 - 2019-04-08
+
+Add `Arr::sortBy()`
+
+### Added
+
+-   `Arr::class`
+    -   `\Yiranzai\Tools\Arr::sortBy()` // Sorts the array with the given callback and retains the original key.
+
 ## v0.2 - 2019-04-04
 
 Add file operations adn three sorting methods.

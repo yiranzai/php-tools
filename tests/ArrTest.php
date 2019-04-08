@@ -9,6 +9,7 @@
 namespace Yiranzai\Tools\Tests;
 
 use Exception;
+use phpDocumentor\Reflection\Types\Static_;
 use PHPUnit\Framework\TestCase;
 use Yiranzai\Tools\Arr;
 
@@ -25,9 +26,9 @@ class ArrTest extends TestCase
     {
         $a = [
             ['a' => 1, 'b' => 0, 'c' => 2],
+            ['a' => 0, 'b' => 2, 'c' => 1],
             ['a' => 0, 'b' => 1, 'c' => 2],
             ['a' => 2, 'b' => 0, 'c' => 1],
-            ['a' => 0, 'b' => 2, 'c' => 1],
             ['a' => 1, 'b' => 2, 'c' => 0],
             ['a' => 2, 'b' => 1, 'c' => 0],
         ];
@@ -39,8 +40,31 @@ class ArrTest extends TestCase
             ['a' => 2, 'b' => 0, 'c' => 1,],
             ['a' => 2, 'b' => 1, 'c' => 0,],
         ];
-
+        $c = [
+            ['a' => 0, 'b' => 2, 'c' => 1,],
+            ['a' => 0, 'b' => 1, 'c' => 2,],
+            ['a' => 1, 'b' => 0, 'c' => 2,],
+            ['a' => 1, 'b' => 2, 'c' => 0,],
+            ['a' => 2, 'b' => 0, 'c' => 1,],
+            ['a' => 2, 'b' => 1, 'c' => 0,],
+        ];
+        $d = [
+            ['a' => 0, 'b' => 1, 'c' => 2,],
+            ['a' => 0, 'b' => 2, 'c' => 1,],
+            ['a' => 1, 'b' => 0, 'c' => 2,],
+            ['a' => 1, 'b' => 2, 'c' => 0,],
+            ['a' => 2, 'b' => 0, 'c' => 1,],
+            ['a' => 2, 'b' => 1, 'c' => 0,],
+        ];
         $this->assertSame($b, Arr::arrSortByField($a, 'a'));
+
+        $this->assertSame($c, array_values(Arr::sortBy($a, static function ($value) {
+            return $value['a'];
+        })));
+
+        $this->assertSame($d, array_values(Arr::sortBy($a, static function ($value) {
+            return [$value['a'], $value['b']];
+        })));
     }
 
     /**

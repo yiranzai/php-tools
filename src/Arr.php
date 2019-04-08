@@ -10,8 +10,38 @@ namespace Yiranzai\Tools;
 
 use Exception;
 
+/**
+ * Class Arr
+ * @package Yiranzai\Tools
+ */
 class Arr
 {
+    /**
+     * 使用给定的回调对数组进行排序并保留原始键。
+     * @param array    $array
+     * @param callable $callback
+     * @param int      $options
+     * @param bool     $descending
+     * @return array
+     */
+    public static function sortBy(array $array, callable $callback, $options = SORT_REGULAR, $descending = false): array
+    {
+        $results = [];
+
+        foreach ($array as $key => $value) {
+            $results[$key] = $callback($value, $key);
+        }
+
+        $descending ? arsort($results, $options)
+            : asort($results, $options);
+
+        foreach (array_keys($results) as $key) {
+            $results[$key] = $array[$key];
+        }
+
+        return $results;
+    }
+
     /**
      * 二维数组按照某个字段排序
      * @param array $arr   要排序的数组
