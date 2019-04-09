@@ -4,6 +4,16 @@ All notable changes to `tools` will be documented in this file.
 
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+## v0.2.2 - 2019-04-09
+
+Add SnowFlake algo, generate 64 bit identifier, use snowflakes from Twitter.
+
+### Added
+
+-   `SnowFlake::class`
+    -   `\Yiranzai\Snowflake\SnowFlake::next()` // generate 64 bit identifier
+    -   `\Yiranzai\Snowflake\SnowFlake::analysis()` // analysis 64 bit identifier
+
 ## v0.2.1 - 2019-04-08
 
 Add `Arr::sortBy()`

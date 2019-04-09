@@ -56,3 +56,6 @@
     -   `\Yiranzai\Tools\Tools::iteratorGet()` // 获取一个对象或者一个数组的属性
     -   `\Yiranzai\Tools\Tools::arrGet()` // 获取数组中的某个元素
     -   `\Yiranzai\Tools\Tools::objectGet()` // 获取对象中的某个元素
+-   `SnowFlake::class`
+    -   `\Yiranzai\Snowflake\SnowFlake::next()` // 生成 64 位 id
+    -   `\Yiranzai\Snowflake\SnowFlake::analysis()` // 解析 64 位 id

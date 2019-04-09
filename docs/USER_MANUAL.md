@@ -56,3 +56,6 @@
     -   `\Yiranzai\Tools\Tools::iteratorGet()` // Get an object or an array of elements
     -   `\Yiranzai\Tools\Tools::arrGet()` // Get an element in the array
     -   `\Yiranzai\Tools\Tools::objectGet()` // Get an element from the object
+-   `SnowFlake::class`
+    -   `\Yiranzai\Snowflake\SnowFlake::next()` // generate 64 bit identifier
+    -   `\Yiranzai\Snowflake\SnowFlake::analysis()` // analysis 64 bit identifier

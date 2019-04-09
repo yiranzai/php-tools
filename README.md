@@ -28,7 +28,7 @@ $ composer require yiranzai/tools
 
 ## Usage
 
-[User Manual](docs/USER_MANUAL.md)
+[More please check the user manual](docs/USER_MANUAL.md)
 
 > abstract
 
@@ -59,6 +59,9 @@ $ composer require yiranzai/tools
     -   `\Yiranzai\Tools\Tools::iteratorGet()` // Get an object or an array of elements
     -   `\Yiranzai\Tools\Tools::arrGet()` // Get an element in the array
     -   `\Yiranzai\Tools\Tools::objectGet()` // Get an element from the object
+-   `SnowFlake::class`
+    -   `\Yiranzai\Snowflake\SnowFlake::next()` // generate 64 bit identifier
+    -   `\Yiranzai\Snowflake\SnowFlake::analysis()` // analysis 64 bit identifier
 
 ## Change log
 
