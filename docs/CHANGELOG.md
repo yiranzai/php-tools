@@ -11,8 +11,8 @@ Add SnowFlake algo, generate 64 bit identifier, use snowflakes from Twitter.
 ### Added
 
 -   `SnowFlake::class`
-    -   `\Yiranzai\Snowflake\SnowFlake::next()` // generate 64 bit identifier
-    -   `\Yiranzai\Snowflake\SnowFlake::analysis()` // analysis 64 bit identifier
+    -   `\Yiranzai\SnowFlake\SnowFlake::next()` // generate 64 bit identifier
+    -   `\Yiranzai\SnowFlake\SnowFlake::analysis()` // analysis 64 bit identifier
 
 ## v0.2.1 - 2019-04-08
 

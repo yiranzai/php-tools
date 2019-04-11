@@ -5,12 +5,12 @@ declare(strict_types=1);
 namespace Yiranzai\Tools\Tests;
 
 use PHPUnit\Framework\TestCase;
-use Yiranzai\Snowflake\Node;
+use Yiranzai\SnowFlake\Node;
 use Yiranzai\SnowFlake\SnowFlake;
 
 /**
  * Class SnowFlakeTest
- * @package Yiranzai\Snowflake\Tests
+ * @package Yiranzai\SnowFlake\Tests
  */
 class SnowFlakeTest extends TestCase
 {

@@ -60,8 +60,8 @@ $ composer require yiranzai/tools
     -   `\Yiranzai\Tools\Tools::arrGet()` // 获取数组中的某个元素
     -   `\Yiranzai\Tools\Tools::objectGet()` // 获取对象中的某个元素
 -   `SnowFlake::class`
-    -   `\Yiranzai\Snowflake\SnowFlake::next()` // 生成64位id
-    -   `\Yiranzai\Snowflake\SnowFlake::analysis()` // 解析64位id
+    -   `\Yiranzai\SnowFlake\SnowFlake::next()` // 生成64位id
+    -   `\Yiranzai\SnowFlake\SnowFlake::analysis()` // 解析64位id
 
 ## Change log
 
