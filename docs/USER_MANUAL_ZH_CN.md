@@ -59,3 +59,5 @@
 -   `SnowFlake::class`
     -   `\Yiranzai\SnowFlake\SnowFlake::next()` // 生成 64 位 id
     -   `\Yiranzai\SnowFlake\SnowFlake::analysis()` // 解析 64 位 id
+-   `Zval::class`
+    -   `Zval::isRef()` // 确定两个变量是否具有引用关系

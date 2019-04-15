@@ -60,8 +60,10 @@ $ composer require yiranzai/tools
     -   `\Yiranzai\Tools\Tools::arrGet()` // 获取数组中的某个元素
     -   `\Yiranzai\Tools\Tools::objectGet()` // 获取对象中的某个元素
 -   `SnowFlake::class`
-    -   `\Yiranzai\SnowFlake\SnowFlake::next()` // 生成64位id
-    -   `\Yiranzai\SnowFlake\SnowFlake::analysis()` // 解析64位id
+    -   `\Yiranzai\SnowFlake\SnowFlake::next()` // 生成 64 位 id
+    -   `\Yiranzai\SnowFlake\SnowFlake::analysis()` // 解析 64 位 id
+-   `Zval::class`
+    -   `Zval::isRef()` // 确定两个变量是否具有引用关系
 
 ## Change log
 

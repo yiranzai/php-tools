@@ -4,6 +4,15 @@ All notable changes to `tools` will be documented in this file.
 
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+## v0.2.3 - 2019-04-15
+
+Add `Zval::isRef()`
+
+### Added
+
+-   `Zval::class`
+    -   `Zval::isRef()` // Determine if two variables have a reference relationship
+
 ## v0.2.2 - 2019-04-09
 
 Add SnowFlake algo, generate 64 bit identifier, use snowflakes from Twitter.

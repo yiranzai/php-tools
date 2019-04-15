@@ -62,6 +62,8 @@ $ composer require yiranzai/tools
 -   `SnowFlake::class`
     -   `\Yiranzai\SnowFlake\SnowFlake::next()` // generate 64 bit identifier
     -   `\Yiranzai\SnowFlake\SnowFlake::analysis()` // analysis 64 bit identifier
+-   `Zval::class`
+    -   `Zval::isRef()` // Determine if two variables have a reference relationship
 
 ## Change log
 
