@@ -16,9 +16,9 @@ class Date
     /**
      * 生成Carbon对象，不合法数据会返回默认值
      *
-     * @param      $dateTime
+     * @param       $dateTime
      * @param mixed $default
-     * @return bool|Carbon
+     * @return Carbon
      */
     public static function toCarbon($dateTime = null, $default = false)
     {
@@ -26,17 +26,22 @@ class Date
             return $dateTime;
         }
         $default = empty($default) ? Carbon::now() : $default;
-        if (is_int($dateTime)) {
+        if (strtotime($dateTime) > 0) {
+            return Carbon::parse($dateTime);
+        }
+
+        if (is_numeric($dateTime)) {
             return Carbon::createFromTimestamp($dateTime);
         }
-        return strtotime($dateTime) > 0 ? Carbon::parse($dateTime) : $default;
+
+        return $default;
     }
 
     /**
      * 人性化显示两个时间的差
      * @param DateTime $leftTime
      * @param DateTime $rightTime
-     * @param bool      $absolute
+     * @param bool     $absolute
      * @return string
      */
     public static function timeDiffFormat(DateTime $leftTime, DateTime $rightTime, $absolute = false): string
