@@ -33,7 +33,7 @@ class Arr
         }
 
         $descending ? arsort($results, $options)
-            : asort($results, $options);
+        : asort($results, $options);
 
         foreach (array_keys($results) as $key) {
             $results[$key] = $array[$key];
@@ -152,11 +152,11 @@ class Arr
             return $array;
         }
         //如果数组长度为奇数，则$m需要等于长度的一半向上补齐整数，偶数则需要等于一半，只有这样array_chunk才能恰好分割为两个长度几乎相同的数组
-        $m = ($len + 1) >> 1;
+        $m              = ($len + 1) >> 1;
         [$left, $right] = array_chunk($array, $m);
-        $left  = self::mergeSort($left);
-        $right = self::mergeSort($right);
-        $reg   = [];
+        $left           = self::mergeSort($left);
+        $right          = self::mergeSort($right);
+        $reg            = [];
         while (count($left) && count($right)) {
             if ($left[0] < $right[0]) {
                 $reg[] = array_shift($left);
@@ -181,7 +181,7 @@ class Arr
         }
         $m      = $len >> 1;
         $mValue = $array[$m];
-        $left   = $right = [];
+        $left   = $right   = [];
         foreach ($array as $key => $iValue) {
             if ($key === $m) {
                 continue;
@@ -193,5 +193,26 @@ class Arr
             }
         }
         return array_merge(self::quickSort($left), [$mValue], self::quickSort($right));
+    }
+
+    /**
+     * PHP 提取多维数组指定一列的方法
+     * @Author   Aliliin
+     * (c) Aliliin <phperali@gmail.com>
+     * @param    array     $array
+     * @param    string    $keyName
+     * @return   array
+     */
+    public function getArrKeysColumnByKey($array, $keyName)
+    {
+        if (floatval(PHP_VERSION) < 5.5) {
+            $newArr = array();
+            foreach ($array as $value) {
+                $newArr[] = $value[$keyName];
+            }
+            return $newArr;
+        } else {
+            return array_column($array, $keyName);
+        }
     }
 }
